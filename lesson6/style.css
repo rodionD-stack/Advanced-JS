@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  padding-right: calc(50% - 590px);
+  padding-left: calc(50% - 590px);
+}
+
+.header {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+  background: #2f3132;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.goods-search {
+  background: linear-gradient(to right, #f7f5f8, #686767);
+  height: 30px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.cart-button,
+.search-button {
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 180px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 25px;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  padding-top: 5px;
+}
+
+.cart-button:hover {
+  border-radius: 25px 0;
+}
+
+.cart-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 100%;
+  height: 100%;
+  filter: blur(22px);
+  transform: scale(0.9, 0.8) translateY(20px);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.cart-button:hover::before {
+  opacity: 1;
+}
+
+.title-goods {
+  background: #e0e1e2;
+}
+
+.goods-list,
+.cart-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.goods-item,
+.cart-item {
+  width: 150px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.goods-item:hover {
+  transform: scale(1.1);
+  transition: 0.3s linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.goods-item > img,
+.cart-item > img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.goods-item__add-to-cart,
+.cart-item__remove-from-cart {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  margin: 15px;
+  border: none;
+  cursor: pointer;
+  color: #323232;
+  border-radius: 8px;
+  transition: all 0.6s;
+  box-shadow: 10px 10px 35px #999999, -10px -10px 35px #dbdbdb;
+}
+
+.goods-item__add-to-cart:hover,
+.cart-item__remove-from-cart:hover {
+  color: #fff;
+  background: #0000cd;
+}
+
+.goods-item > h3,
+p {
+  margin: 5px;
+}
+
+/*.cart-box {
+  display: block;
+  border: 10px solid #696969;
+}*/
+
+h2 {
+  padding: 10px 20px;
+}
