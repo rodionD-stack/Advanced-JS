@@ -15,7 +15,7 @@
         <header class="header center">
             <div class="search">
                 <input type="text" class="goods-search" v-model="searchLine" />
-                <search :handler='filterGoods'></search>
+                <search :size='shopCartSize'></search>
             </div>
             <button class="cart-button" type="button">
                 <div>Корзина</div>
@@ -23,6 +23,7 @@
         </header>
         <main class="title-goods center">
             <h2>Каталог</h2>
+            <error></error>
             <h2 v-if="filteredGoods.length == 0">Ничего не
                 найдено</h2>
             <goods-list :goods='filteredGoods' :handler='addToCart'></goods-list>
